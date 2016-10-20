@@ -24,10 +24,10 @@ matrix:
       configuration: Debug
     - platform: x64
       configuration: Debug
-  - platform: x86
-    configuration: Release
-  - platform: x64
-    configuration: Release
+    - platform: x86
+      configuration: Release
+    - platform: x64
+      configuration: Release
 
 cache:
   - libs
