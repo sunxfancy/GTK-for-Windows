@@ -1,0 +1,40 @@
+
+branches:
+  except:
+    - gh-pages
+
+
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
+
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# Build worker image (VM template)
+image: Visual Studio 2015
+
+# fetch repository as zip archive
+shallow_clone: true                 # default is "false"
+
+matrix:
+  allow_failures:
+    - platform: x86
+      configuration: Debug
+    - platform: x64
+      configuration: Debug
+  - platform: x86
+      configuration: Release
+  - platform: x64
+    configuration: Release
+
+cache:
+  - libs
+  - MinGW-w64
+  - MSYS
+
+
+install:
+  - cmd: setup.bat
+  
