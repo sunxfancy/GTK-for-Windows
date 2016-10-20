@@ -41,18 +41,6 @@ if exist C:\MSYS (
     echo.
     echo *** WARNING ***
     echo You have already installed MSYS to C:\MSYS
-    echo You may want to remove it completely before setting up the building
-    echo environment again with this script.
-    echo Press "r" to remove it and install a new one.
-    echo Press "s" to skip to the next package.
-    echo Or press any key else to abort.
-    set /p input=
-    if /i "!input!" EQU "r" (
-        rmdir /S /Q C:\MSYS
-        goto INSTALL_MSYS
-    ) else (
-        if /i "!input!" NEQ "s" exit /B 1
-    )
 ) else (
     :INSTALL_MSYS
     Tools\7za.exe x -oC:\ MSYS\!filename! msys 
@@ -145,17 +133,6 @@ if exist C:\MinGW (
     echo.
     echo *** WARNING ***
     echo You have already installed MinGW-w64 to C:\MinGW
-    echo You may want to remove it completely before setting up the building
-    echo environment again with this script.
-    echo Press "r" to remove it and install a new one.
-    echo Press "s" to skip to the next package.
-    echo Or press any key else to abort.
-    set /p input=
-    if /i "!input!" EQU "r" (
-        rmdir /S /Q C:\MinGW
-    ) else (
-        if /i "!input!" NEQ "s" exit /B 1
-    )
 )
 echo.
 echo Which compliler do you prefer? ^(64-bit compilers are not tested^)
