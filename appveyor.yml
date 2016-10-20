@@ -25,7 +25,7 @@ matrix:
     - platform: x64
       configuration: Debug
   - platform: x86
-      configuration: Release
+    configuration: Release
   - platform: x64
     configuration: Release
 
