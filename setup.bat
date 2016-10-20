@@ -144,7 +144,7 @@ echo 5. MinGW-w64 GCC 5.3.0, x86_64, posix, sjlj
 echo 6. MinGW-w64 GCC 5.3.0, x86_64, posix, seh
 echo 7. MinGW-w64 GCC 5.3.0, x86_64, win32, sjlj
 echo 8. MinGW-w64 GCC 5.3.0, x86_64, win32, seh
-set /p compiler=
+set /p compiler=8
 if %compiler% LSS 1 (
     echo Please choose 1-8.
     goto MinGW
@@ -282,7 +282,6 @@ echo Building environment setup complete.
 echo *Note: If this is the first time the font DroidSans is installed, please
 echo reboot your system before it takes effect.
 
-pause
 rmdir /S /Q cache
 exit /B
 
